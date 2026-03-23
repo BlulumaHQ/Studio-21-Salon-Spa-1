@@ -10,7 +10,7 @@ import facialImg from "@/assets/service-facial.jpg";
 import productsImg from "@/assets/spa-products.jpg";
 import microbladingImg from "@/assets/service-microblading.jpg";
 
-const BookCTA = ({ text = "Book Online", variant = "hero" as const, size = "xl" as const, className = "" }) => (
+const BookCTA = ({ text = "Book Online", variant = "hero", size = "xl", className = "" }: { text?: string; variant?: "hero" | "cta" | "ctaOutline"; size?: "xl" | "lg" | "default"; className?: string }) => (
   <Link to="/contact-us" onClick={() => window.scrollTo(0, 0)}>
     <Button variant={variant} size={size} className={className}>
       {text} <ArrowRight size={16} />
